@@ -27,10 +27,12 @@ export default function Login(){
                     <input type="text" /><br />
                     <button>Entrar</button>
                 </form>
-                <br />
-                <hr /> 
-                <p>Não Possui uma conta?</p>
-                <button>Cadastrar</button>
+                <div className="baixo">
+                    <br />
+                    <hr /> 
+                    <p>Não Possui uma conta?</p>
+                    <button>Cadastrar</button>
+                </div>    
             </div>
         </body>
     )
