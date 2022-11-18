@@ -1,0 +1,103 @@
+.superior{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(63,220,114);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    input{
+        position: absolute;
+        top: 20%;
+        left: 75%;
+        border: 0;
+        border-radius: 15px;
+        height: 45px;
+        width: 250px;
+        padding-left: 50px;
+        font-size: 1.3rem;
+        box-shadow: -1.3px 1.3px 8px 1px #037a0d;
+    }
+    input:hover{
+        left: 74%;
+        width: 270px;
+        height: 46px;
+    }
+    
+    img{
+        position: relative;
+        top: 15%;
+        left: 8%;
+    }
+
+    a{
+        margin: 0px 10px; 
+        position: relative;
+        width: 20%;
+        left: 15px;
+        height: 100%;
+        p{
+            font-size: 150%;
+            position: absolute;
+            left: 49%;
+            top: 20%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    a:hover{
+        width: 22%;
+        left: 10px;
+        background-color: rgb(5,161,2);
+        color: rgb(0, 0, 72);
+        font-weight: bold;
+
+        img{
+            left: 10%;
+        }
+
+        .iconHome{
+            left: 15%;
+        }
+        
+    }
+    .iconHome{
+        position: absolute;
+        left: 12%;
+        top: 13%;
+    }
+
+    .iconProduto{
+        position: absolute;
+        left: 4%;
+    }
+}
+
+.inferior{
+    position: absolute;
+    top: 90%;
+    left: 0;
+    background-color: rgb(63,220,114);
+    width: 100%;
+    height: 10%;
+
+    p{
+        font-size: large;
+        position: absolute;
+        top: 5%;
+        left: 66%;
+    }
+
+    img{
+        position: relative;
+        top: 25%;
+        left: 90%;
+        padding-left: 13px;
+    }
+    img:hover{
+        top: 20%;
+        height: 40px;
+    }
+}
