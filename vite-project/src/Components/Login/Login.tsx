@@ -1,8 +1,11 @@
 import "../Styles/Login.scss"
-import { BsTwitter, BsFacebook } from "react-icons/Bs";
-
 
 export default function Login(){
+    
+    function validarConta(){
+        return(<><span>Hello</span></>);
+    }
+
     return(
         <body>
             <div className="BarraSuperior">
@@ -22,16 +25,16 @@ export default function Login(){
 
                 <form action="">
                     <label htmlFor="">E-mail: </label>
-                    <input type="text" /><br/>
-                    <label htmlFor="">Senha: </label>
-                    <input type="text" /><br />
-                    <button>Entrar</button>
+                    <input type="email" name="email" /><br/>
+                    <label>Senha: </label>
+                    <input type="password" /><br />
+                    <button onClick={validarConta}>Entrar</button>
                 </form>
                 <div className="baixo">
                     <br />
                     <hr /> 
                     <p>Não Possui uma conta?</p>
-                    <button>Cadastrar</button>
+                    <a href="./Cadastro.tsx"><button>Cadastrar</button></a>
                 </div>    
             </div>
         </body>

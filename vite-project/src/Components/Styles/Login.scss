@@ -9,7 +9,7 @@ button{
 
 .BarraSuperior{
     position: absolute;
-    width: 100%;
+    width: 98.5%;
     left: 0;
     top: 0;
     background-color: rgb(63,220,114);
@@ -88,7 +88,7 @@ button{
 
 .baixo{
     position: absolute;
-    top: 65%;
+    top: 73%;
     width: 100%;
     
     p{
@@ -98,19 +98,21 @@ button{
     button{
         position: absolute;
         left: 80%;
-        top: 140%;
+        top: 130%;
         width: 100px;
         height: 25px;
         border-radius: 10px;
         border: 0;
     }
-    
+    hr{
+        width: 80%;
+    }
 }
 .BarraInferior{
     position: absolute;
     width: 100%;
     left: 0;
-    top: 91%;
+    top: 92%;
     background-color: rgb(63,220,114);
     color: white;
     display: flex;  
