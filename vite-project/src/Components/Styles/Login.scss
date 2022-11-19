@@ -3,23 +3,6 @@ button{
     border-radius: 5px;
 }
 
-.BarraSuperior{
-    position: absolute;
-    width: 98.5%;
-    left: 0;
-    top: 0;
-    background-color: rgb(63,220,114);
-    color:black;
-    display:flex;
-    padding: 10px;
-    grid-gap: 5px 8px;
-    font-size: 20px;
-    
-    img{
-        width: 70px;
-    }
-}
-
 .Form{
     position: absolute;
     top: 52.4%;
@@ -27,7 +10,7 @@ button{
     transform: translate(-50%,-50%);
     background-color: white;
     width: 50%;
-    height: 77%;
+    height: 80%;
     
 
     h2{ 
@@ -69,7 +52,7 @@ button{
         input:hover{
             left: 5%;
             width: 73%;
-            height: 35px;
+            height: 30px;
         }
         button{
             background-color: rgb(0,201,153);
@@ -116,35 +99,12 @@ button{
     hr{
         width: 80%;
     }
+    button:hover{
+        width: 17%;
+        left: 79%;
+        height: 75%;
+        top: 130%;
+        font-size: 0.9rem;
+        font-weight: bold;
+    }
 }
-.BarraInferior{
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 92%;
-    background-color: rgb(63,220,114);
-    color: white;
-    display: flex;  
-
-    p{
-        position: relative;
-        left: 71%;
-    }
-
-    img{
-        position: relative;
-        display: flex;
-        
-        top: 10px;
-        left: 25%;
-    }
-    a{
-        position: relative;
-        left: 71%;
-    }
-    img:hover{
-        top: 5%;
-        height: 36px;
-    }
-    
-}   

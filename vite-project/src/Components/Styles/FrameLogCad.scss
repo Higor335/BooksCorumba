@@ -1,0 +1,47 @@
+.BarraSuperior{
+    position: absolute;
+    width: 98.5%;
+    left: 0;
+    top: 0;
+    background-color: rgb(63,220,114);
+    color:black;
+    display:flex;
+    padding: 10px;
+    grid-gap: 5px 8px;
+    font-size: 20px;
+    
+    img{
+        width: 70px;
+    }
+}
+
+.BarraInferior{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 92%;
+    background-color: rgb(63,220,114);
+    color: white;
+    display: flex;  
+
+    p{
+        position: relative;
+        left: 71%;
+    }
+
+    img{
+        top: 15%;
+        position: relative;
+        display: flex;
+        left: 25%;
+    }
+    a{
+        position: relative;
+        left: 71%;
+    }
+    img:hover{
+        top: 10%;
+        height: 36px;
+    }
+    
+}   

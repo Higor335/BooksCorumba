@@ -1,4 +1,7 @@
+import Cadastro from "../Cadastro/Cadastro";
+import { Link } from 'react-router-dom';
 import "../Styles/Login.scss"
+import Frames from "../FrameLogCad/Frames";
 
 export default function Login(){
     
@@ -8,12 +11,6 @@ export default function Login(){
 
     return(
         <body>
-            <div className="BarraSuperior">
-                <img src="imagens/IconeLivroPequeno.png" alt="ícone de livro pequeno" />
-                <p>BOOKS CORUMBÁ</p>
-                
-            </div>
-
             <div className="Form">
                 <h2>LOGIN</h2>
 
@@ -29,15 +26,10 @@ export default function Login(){
                     <br />
                     <hr /> 
                     <p>Não Possui uma conta?</p>
-                    <a href="./Cadastro.tsx"><button>Cadastrar</button></a>
+                    <Link className="Link" to={'/Cadastro'}><button>Cadastrar</button></Link>
                 </div>    
             </div>
-
-            <div className="BarraInferior">
-                <p>Contato: BooksCorumba@outlook.com</p>
-                <a href="//facebook.com"><img src="imagens/IconFace.png" alt="facebook icon" /></a>
-                <a href="//twitter.com"><img src="imagens/Icontwitter.png" alt="twitter icon" /></a>
-            </div>
+            <Frames></Frames>
         </body>
     )
 }

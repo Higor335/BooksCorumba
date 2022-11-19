@@ -24,6 +24,10 @@
         left: 74%;
         width: 270px;
         height: 46px;
+
+        .iconLupa{
+            left: 74.5%;
+        }
     }
     
     img{
@@ -72,6 +76,12 @@
     .iconProduto{
         position: absolute;
         left: 4%;
+    }
+
+    .iconLupa{
+        position: absolute;
+        left: 75.7%;
+        top: 33%;
     }
 }
 

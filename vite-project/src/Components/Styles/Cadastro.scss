@@ -1,25 +1,3 @@
-body{
-    background-color: rgb(245,250,238);
-
-}
-
-.BarraSuperior{
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgb(63,220,114);
-    color:black;
-    display:flex;
-    padding: 10px;
-    grid-gap: 5px 8px;
-    font-size: 20px;
-
-    a{
-        width: 50%;
-    }
-}
-
 .BarraMeio{
     position: absolute;
     width: 50%;
@@ -29,13 +7,16 @@ body{
     transform: translate(-50%,-50%);
     background-color: #ffffff;
 
-    a{
-        position: relative;
-        top: 25%;
-        left: 30%;
-        width: 50%;
-        font-size: 20px;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    .Link{
+        position: absolute;
+        top: 88%;
+        left: 44%;
+        text-decoration: none;
+        width: 13%;
+        height: 6%;
+        p{
+            top: -70%;
+        }
     }
 
     h2{
@@ -44,55 +25,44 @@ body{
         left: 36.8%;
         color: rgb(0,78,8);
         font-size: 35px;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
     }
 
     p{
         position: relative;
         width: 50%;
         top: 5%;
-        left: 15%;
-        font-size: 23px;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        left: 25%;
+        font-size: 16px;
+        text-shadow: -3px 3px 2px rgb(208, 201, 201);
     }
 
     input{
         position: relative;
-        top:-5%;
-        left: 47.5%;
-        width: 55%;
-        height: 35px;
+        top:-1.7%;
+        left: 53%;
+        width: 289px;
+        height: 30px;
         margin: -20%;
         border-radius: 5px;
         border: 0;
         padding-left: 8px;
         background-color: rgb(245,245,245);
-        box-shadow: 0px 9px 6px 4px rgb(206, 197, 197);
+        box-shadow: 2px 2px 2px 1px rgb(206, 197, 197);
         outline: 0;
     }
 
     button{
         position: absolute;
-        left: 50%;
-        top: 72%;
-        width: 70%;
-        height: 50px;
+        left: 51%;
+        top: 67%;
+        width: 53%;
+        height: 40px;
         transform: translate(-50%);
         border: 0;
-        border-radius: 15px;
-        font-size: 25px;
-        background-color: #00ff73;
+        border-radius: 10px;
+        font-size: 17px;
+        background-color: #00c999;
     }
-    
-}
-
-.BarraInferior{
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 95%;
-    background-color: rgb(63,220,114);
-    color: white;
-    align-items: center;
     
 }
