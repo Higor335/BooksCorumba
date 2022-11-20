@@ -21,27 +21,27 @@
 
     h2{
         position: relative;
-        top: 3%;
-        left: 36.8%;
+        top: 7%;
+        left: 40%;
         color: rgb(0,78,8);
-        font-size: 35px;
-        
+        font-size: 30px;
     }
 
     p{
         position: relative;
         width: 50%;
-        top: 5%;
+        top: 9.55%;
         left: 25%;
         font-size: 16px;
         text-shadow: -3px 3px 2px rgb(208, 201, 201);
+        color: rgb(1, 79, 1);
     }
 
     input{
         position: relative;
-        top:-1.7%;
-        left: 53%;
-        width: 289px;
+        top:3%;
+        left: 54.5%;
+        width: 280px;
         height: 30px;
         margin: -20%;
         border-radius: 5px;
@@ -51,10 +51,14 @@
         box-shadow: 2px 2px 2px 1px rgb(206, 197, 197);
         outline: 0;
     }
+    input:hover{
+        left: 53%;
+        width: 300px;
+    }
 
     button{
         position: absolute;
-        left: 51%;
+        left: 51.2%;
         top: 67%;
         width: 53%;
         height: 40px;
@@ -63,6 +67,11 @@
         border-radius: 10px;
         font-size: 17px;
         background-color: #00c999;
+    }
+
+    button:hover{
+        width: 56%;
+        font-weight: bolder;
     }
     
 }

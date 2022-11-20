@@ -10,11 +10,11 @@ export default function Cadastro(){
             <div className="BarraMeio">
                 <h2>Cadastro</h2>
                 <p>Nome:</p>
-                <input></input>
+                <input type={"text"} name="nome"></input>
                 <p>Email:</p>
-                <input></input>
+                <input type={"email"} name="email"></input>
                 <p>Senha:</p>
-                <input></input>
+                <input type={"password"} name="senha"></input>
                 <button className="Button">Cadastrar</button>
                 <Link className="Link" to={'/'}><p>Voltar</p></Link>
             </div>

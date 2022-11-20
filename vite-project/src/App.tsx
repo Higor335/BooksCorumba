@@ -4,7 +4,11 @@ import FrameSI from './Components/FrameSI/FrameSI'
 import Login from './Components/Login/Login'
 import Cadastro from './Components/Cadastro/Cadastro'
 
-
+/*adicionar Route
+<Route path='/Login' element={<Login />} />
+<Route path='/Vendas' element={<Vendas />} />
+<Route path='/Produto' element={<Produto />} />
+*/
 function App() {
   return (
     <Router>

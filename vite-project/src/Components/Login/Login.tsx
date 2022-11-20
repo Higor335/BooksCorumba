@@ -15,7 +15,7 @@ export default function Login(){
                 <h2>LOGIN</h2>
 
                 <form action="">
-                    <label htmlFor="">E-mail: </label>
+                    <label>E-mail: </label>
                     <input type="email" name="email" /><br/>
                     <label>Senha: </label>
                     <input type="password" /><br />
