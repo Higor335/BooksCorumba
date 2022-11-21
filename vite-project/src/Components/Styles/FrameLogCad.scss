@@ -29,19 +29,29 @@
         left: 71%;
     }
 
-    img{
-        top: 15%;
-        position: relative;
-        display: flex;
-        left: 25%;
-    }
     a{
         position: relative;
-        left: 71%;
+        left: 72%;
+        padding-left:2px;
+    
+        img{
+            top: 15%;
+            position: relative;
+            display: flex;
+            left: -20%;
+            padding-left: 15%;
+        }
     }
+
+    .espaco{
+        position: relative;
+        width: 1%;
+        height: 5%;
+
+    }
+
     img:hover{
         top: 10%;
         height: 36px;
     }
-    
 }   

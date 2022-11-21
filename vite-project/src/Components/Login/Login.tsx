@@ -1,4 +1,3 @@
-import Cadastro from "../Cadastro/Cadastro";
 import { Link } from 'react-router-dom';
 import "../Styles/Login.scss"
 import Frames from "../FrameLogCad/Frames";
@@ -12,6 +11,7 @@ export default function Login(){
     return(
         <body>
             <div className="Form">
+                <Link to={"/"}><button className="voltar"><div className="seta"></div></button></Link>
                 <h2>LOGIN</h2>
 
                 <form action="">

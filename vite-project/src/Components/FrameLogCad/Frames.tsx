@@ -11,6 +11,7 @@ export default function Frames(){
             <div className="BarraInferior">
                 <p>Contato: BooksCorumba@outlook.com</p>
                 <a href="//facebook.com"><img src="imagens/IconFace.png" alt="facebook icon" /></a>
+                <div className="espaco"></div>
                 <a href="//twitter.com"><img src="imagens/Icontwitter.png" alt="twitter icon" /></a>
             </div>
         </>

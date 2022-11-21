@@ -7,17 +7,17 @@ export default function Cadastro(){
     return(
         <body>
         
-            <div className="BarraMeio">
+            <form className="BarraMeio">
                 <h2>Cadastro</h2>
                 <p>Nome:</p>
-                <input type={"text"} name="nome"></input>
+                <input type="text" name="nome"></input>
                 <p>Email:</p>
-                <input type={"email"} name="email"></input>
+                <input type="email" name="email"></input>
                 <p>Senha:</p>
-                <input type={"password"} name="senha"></input>
-                <button className="Button">Cadastrar</button>
-                <Link className="Link" to={'/'}><p>Voltar</p></Link>
-            </div>
+                <input type="password" name="senha"></input>
+                <button className="Cadastrar">Cadastrar</button>
+                <Link className="Link" to={'/Login'}><p>Voltar</p></Link>
+            </form>
             <Frames></Frames>
         </body>
     )

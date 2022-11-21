@@ -1,0 +1,91 @@
+body{
+    .desc{
+        text-align: justify;
+        font-size: 2.2rem;
+        position: absolute;
+        top: 20%;
+        left: 8%;
+        padding-top: 10px;
+        line-height: 50px;
+    }
+}
+
+
+.login{
+    position: absolute;
+    background-color: rgb(5,161,2);
+    width: 8%;
+    height: 8%;
+    left: 92%;
+    top: 18%;
+    border-radius: 15px 0px 0px 15px;
+    
+    p{
+        color: white;
+        position: absolute;
+        font-size: 30px;
+        left: 20%;
+        top: -42%;
+    }
+}
+
+.login:hover{
+    left: 80%;
+    width: 20%;
+
+    p{
+        left: 6%;
+    }
+}
+
+
+.livros{
+    position: absolute;
+    background-color: white;
+    left: 63%;
+    top: 25%;
+    width: 27%;
+    height: 55%;
+    border-radius: 20%;
+
+    button{
+        position: absolute;
+        top: 40%;
+        width: 70px;
+        height: 70px;
+        border: 0;
+        border-radius: 100%;
+        background-color: rgb(0,33,53);
+    }
+    
+
+    .esquerda{
+        left: -9%;
+    }
+
+    .direita{
+        left: 90%;
+    }
+}
+
+.setaEsquerda{
+  position: absolute;
+  top: 29%;
+  left: 30%;
+  padding: 15px;
+  box-shadow: 3.5px -3.5px 0px 1px white inset;
+  border: solid transparent;
+  border-width: 0 0 2px 2px;
+  transform: rotate(45deg);
+}
+
+.setaDireita{
+    position: absolute;
+    top: 29%;
+    left: 20%;
+    padding: 15px;
+    box-shadow: 3.5px -3.5px 0px 1px white inset;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+    transform: rotate(225deg);
+}

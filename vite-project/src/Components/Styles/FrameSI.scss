@@ -20,13 +20,16 @@
         font-size: 1.3rem;
         box-shadow: -1.3px 1.3px 8px 1px #037a0d;
     }
-    input:hover{
-        left: 74%;
-        width: 270px;
-        height: 46px;
+
+    .busca:hover{
+        input{
+            left: 74%;
+            width: 270px;
+            height: 46px;
+        }
 
         .iconLupa{
-            left: 74.5%;
+            left: 75%;
         }
     }
     
@@ -36,7 +39,7 @@
         left: 8%;
     }
 
-    a{
+    .link{
         margin: 0px 10px; 
         position: relative;
         width: 20%;
@@ -51,7 +54,7 @@
         }
     }
 
-    a:hover{
+    .link:hover{
         width: 22%;
         left: 10px;
         background-color: rgb(5,161,2);
@@ -100,11 +103,14 @@
         left: 66%;
     }
 
+    a{
+        padding-left: 7px;
+    }
+
     img{
         position: relative;
         top: 25%;
         left: 90%;
-        padding-left: 13px;
     }
     img:hover{
         top: 20%;
