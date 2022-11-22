@@ -1,0 +1,69 @@
+[
+    {
+        "id": 1,
+        "titulo": "Crepúsculo",
+        "autor": "Stephenie Meyer",
+        "data": "26 de março 2008",
+        "descricao": "Crepúsculo poderia ser uma história comum, não fosse um elemento irresistível: o objeto da paixão da protagonista é um vampiro. \nAssim, soma-se à paixão um perigo sobrenatural temperado com muito suspense, e o resultado é uma leitura de tirar o fôlego. Um romance repleto das angústias e incertezas da juventude - o arrebatamento, a atração, a ansiedade que antecede cada palavra, cada gesto, e todos os medos.",
+        "linkImg": "https://drive.google.com/uc?id=15IefP0xdmNja-2hRCid5J-C8uNdAzcFl",
+        "preco": 34.95,
+        "promo": false,
+        "preco_promo": 10.00
+    },
+    {
+        "id": 2,    
+        "titulo": "Shrek",
+        "autor": "William Steig",
+        "data": "26 de março 2001",
+        "descricao": "Em um pântano distante vive Shrek (Mike Myers), um ogro solitário que vê, sem mais nem menos, sua vida ser invadida por uma série de personagens de contos de fada, como três ratos cegos, um grande e malvado lobo e ainda três porcos que não têm um lugar onde morar.",
+        "linkImg": "https://images-na.ssl-images-amazon.com/images/S/pv-target-images/18dbce6a92f8b83aed0b55eccbf99bf397b556e83914bbed8a69acebaa4cd7d6._RI_V_TTW_.jpg",
+        "preco": 69.80,
+        "promo": false,
+        "preco_promo": 20.10
+    
+    },
+    {
+        "id": 3,    
+        "titulo": "O chamado de Cthulhu e outros contos",
+        "autor": "H.P Lovecraft",
+        "data": "fevereiro de 1928",
+        "descricao": "O Chamado de Cthulhu é um conto do norte-americano H.P. Lovecraft que logo se tornou um clássico do terror. Foi escrito em 1926 e publicado pela primeira vez na revista estadunidense Weird Tales em fevereiro de 1928. Cthulhu é um deus que nas primeiras páginas do conto aparece como um ídolo de argila quase indescritível, possuindo um culto multimilenar dedicado a trazê-lo de volta, o seu retorno desencadearia o fim da humanidade. Neste livro, encontramos esse clássico e mais sete contos consagrados do autor na literatura de terror.",
+        "linkImg": "https://m.media-amazon.com/images/I/51t-2xkikXL._SY344_BO1,204,203,200_QL70_ML2_.jpg",
+        "preco": 10.90,
+        "promo": false,
+        "preco_promo": 2.95    
+    },
+    {
+        "id": 4,    
+        "titulo": "Construa seu diário do Minecraft",
+        "autor": "Vários Autores",
+        "data": "1 de julho 2016",
+        "descricao": "Construa seu diário minecraft um diário diferente e especialmente criado para os fãs do jogominecraft. Ele vai servir para anotar ideias, memorias, coisas do dia a dia ou apenas para se divertir. De forma lúdica, este diário desperta a imaginação de quem o constrói. Com estimulação da criatividade, você vai poder personaliza-lo para que fique com a sua cara, assim você poderá compartilhar com os amigos. Saia do comum, comece agora mesmo a construir o seu diário e seu universo minecraft. Divirta-se sinta e viva este livro.",
+        "linkImg": "https://m.media-amazon.com/images/I/51UMMtpGMNL._SX335_BO1,204,203,200_.jpg",
+        "preco": 1.50,
+        "promo": true,
+        "preco_promo": 0.05       
+    },
+    {
+        "id": 5,    
+        "titulo": "Harry Potter e a Pedra Filosofal",
+        "autor": "J.K Rowling",
+        "data": "19 agosto 2017",
+        "descricao": "Harry Potter é um garoto cujos pais, feiticeiros, foram assassinados por um poderosíssimo bruxo quando ele ainda era um bebê. Ele foi levado, então, para a casa dos tios que nada tinham a ver com o sobrenatural. Pelo contrário. Até os 10 anos, Harry foi uma espécie de gata borralheira: maltratado pelos tios, herdava roupas velhas do primo gorducho, tinha óculos remendados e era tratado como um estorvo. No dia de seu aniversário de 11 anos, entretanto, ele parece deslizar por um buraco sem fundo, como o de Alice no país das maravilhas, que o conduz a um mundo mágico. Descobre sua verdadeira história e seu destino: ser um aprendiz de feiticeiro até o dia em que terá que enfrentar a pior força do mal, o homem que assassinou seus pais. O menino de olhos verde, magricela e desengonçado, tão habituado à rejeição, descobre, também, que é um herói no universo dos magos. Potter fica sabendo que é a única pessoa a ter sobrevivido a um ataque do tal bruxo do mal e essa é a causa da marca em forma de raio que ele carrega na testa. Ele não é um garoto qualquer, ele sequer é um feiticeiro qualquer ele é Harry Potter, símbolo de poder, resistência e um líder natural entre os sobrenaturais. A fábula, recheada de fantasmas, paredes que falam, caldeirões, sapos, unicórnios, dragões e gigantes, não é, entretanto, apenas um passatempo.",
+        "linkImg": "https://m.media-amazon.com/images/I/41897yAI4LL._SX346_BO1,204,203,200_.jpg",
+        "preco": 25.00,
+        "promo": true,
+        "preco_promo": 12.00       
+    },
+    {
+        "id": 6,    
+        "titulo": "O psicopata americano",
+        "autor": "Bret Easton Ellis",
+        "data": "16 setembro 2011",
+        "descricao": "O psicopata americano' conta a história de Patrick Batemann, um jovem de 26 anos que de dia fatura uma fortuna trabalhando em Wall Street e à noite se acaba em festas regadas a cocaína e uísque. Quando se sente muito entediado, sai pelas ruas de Nova York assassinando brutalmente mendigos, torturando prostitutas e todos aqueles que de alguma forma o entediam. Sem piedade, sem remorso, sem consciência, em seguida saindo para tomar um drinque ou fazer compras em lojas de grifes.",
+        "linkImg": "https://m.media-amazon.com/images/I/51gsy+9VzWL._SX297_BO1,204,203,200_.jpg",
+        "preco": 35.00,
+        "promo": true,
+        "preco_promo": 15.30     
+    }
+]
