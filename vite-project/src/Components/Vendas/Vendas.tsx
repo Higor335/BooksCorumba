@@ -9,21 +9,27 @@ export default function Vendas(){
                     <div className="blocoLivros">
                         <div className="livro">
                             <h3>titulo</h3>
-                            <p>descrição</p>
+                            <div className="texto">
+                                <p>descrição</p>
+                            </div>
                             <img src="imagens/LivroLoja.png" alt="" />
                             <Link to={"/Produto"}><button>comprar</button></Link>
                         </div>
                         <div className="separador"/>
                         <div className="livro">
                             <h3>titulo</h3>
-                            <p>descrição</p>
+                            <div className="texto">
+                                <p>descrição</p>
+                            </div>
                             <img src="imagens/LivroLoja.png" alt="" />
                             <Link to={"/Produto"}><button>comprar</button></Link>
                         </div>
                         <div className="separador"/>
                         <div className="livro">
                             <h3>titulo</h3>
-                            <p>descrição</p>
+                            <div className="texto">
+                                <p>descrição</p>
+                            </div>
                             <img src="imagens/LivroLoja.png" alt="" />
                             <Link to={"/Produto"}><button>comprar</button></Link>
                         </div>

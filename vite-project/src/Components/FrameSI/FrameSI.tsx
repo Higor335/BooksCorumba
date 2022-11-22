@@ -24,9 +24,10 @@ export default function FrameSI(){
             </div>
 
             <div className="inferior">
+                <img className='logo' src="imagens/IconeLivroPequeno.png" alt="ícone de livro pequeno" />
+                <p className='nome'>BOOKS CORUMBÁ</p>
                 <p>Contato: BooksCorumba@outlook.com</p>
                 <a href="//facebook.com"><img src="imagens/IconFace.png" alt="facebook icon" /></a>
-                
                 <a href="//twitter.com"><img src="imagens/Icontwitter.png" alt="twitter icon" /></a>
             </div>
         </>

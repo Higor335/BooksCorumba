@@ -109,11 +109,21 @@
 
     img{
         position: relative;
-        top: 25%;
-        left: 90%;
+        top: 5%;
+        left: 86%;
     }
     img:hover{
         top: 20%;
         height: 40px;
+    }
+
+    .nome{
+        left: 6%;
+        top: 10%;
+    }
+    .logo{
+        left: 1%;
+        top: 14%;
+        width: 4.1%;
     }
 }

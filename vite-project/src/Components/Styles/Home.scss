@@ -41,7 +41,7 @@ body{
 
 .livros{
     position: absolute;
-    background-color: white;
+    background-color: rgb(224, 233, 239);
     left: 63%;
     top: 25%;
     width: 27%;
@@ -54,13 +54,13 @@ body{
         width: 70px;
         height: 70px;
         border: 0;
-        border-radius: 100%;
-        background-color: rgb(0,33,53);
+        border-radius: 43%;
+        background-color: rgb(15, 55, 81);
     }
     
     img{
         position: absolute;
-        top: 6%;
+        top: 4.8%;
         left: 23%;
         width: 55%;
         border-radius: 5%;
@@ -76,7 +76,7 @@ body{
 
 .setaEsquerda{
   position: absolute;
-  top: 29%;
+  top: 28%;
   left: 30%;
   padding: 15px;
   box-shadow: 3.5px -3.5px 0px 1px white inset;
@@ -87,7 +87,7 @@ body{
 
 .setaDireita{
     position: absolute;
-    top: 29%;
+    top: 28%;
     left: 20%;
     padding: 15px;
     box-shadow: 3.5px -3.5px 0px 1px white inset;

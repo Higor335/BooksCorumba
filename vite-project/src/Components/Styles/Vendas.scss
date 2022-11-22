@@ -29,7 +29,7 @@
         border-width: 0 0 2px 2px;
         transform: rotate(45deg);
       }
-      
+
       .setaDireita{
           position: absolute;
           top: 25%;
@@ -68,11 +68,18 @@
                 left: 40%;
                 font-size: 2rem;
             }
-            p{
-                position: absolute;
-                top: 20%;
-                left: 41%;
-                color: white;
+            .texto{
+            position: absolute;
+            top: 18%;
+            left: 10%;
+            width: 80%;
+            height: 40%;
+            display: flex;
+                p{
+                    text-align: justify;
+                    word-break: break-all;
+                    color: white;
+                }
             }
             img{
                 width: 55%;
