@@ -10,14 +10,20 @@ export default function Home(){
 const [indice,setIndice] = useState(0);
 
 function somar(){
-    if(indice<(capas.length-1)){
+    if(indice<5){
         setIndice(indice+1)
+    }
+    if(indice==5){
+        setIndice(indice-5)
     }
 }
 
 function subtrair(){
     if(indice>0){
         setIndice(indice-1)
+    }
+    if(indice==0){
+        setIndice(indice+5)
     }
 }
 
@@ -29,7 +35,7 @@ function subtrair(){
             </div>
 
             <div className="livros">
-                <Capa capa={capas[indice]} />
+                <Capa className="ima" capa={capas[indice]} />
                 <button className="esquerda" onClick={subtrair}> <div className="setaEsquerda"/> </button>
                 <button className="direita" onClick={somar}> <div className="setaDireita"/> </button>
             </div>
