@@ -1,7 +1,7 @@
 .conteudo{
     position: absolute;
     left: 0%;
-    top: 5%;
+    top: 0%;
     width: 100%;
     height: 90%;
     button{
@@ -45,29 +45,31 @@
     .blocoLivros{
         
         position: relative;
-        top: 15%;
+        top: 20%;
         left: 12%;
-        width: 75%;
+        width: 77%;
         display: flex;
         flex-direction: row;
         .separador{
-            width: 3%;
+            width: 7%;
             background-color: rgb(245,250,238);
         }
         .livro{
             background-color: rgb(63,220,114);
             position: relative;
-            width: 16.99rem;
+            width: 80rem;
             height: 390px;
             left: 0%;
             border-radius: 10%;
             padding-left: 5%;
             h3{
                 position: absolute;
-                top: 0%;
+                top: 5%;
                 left: 50%;
+                
                 transform: translate(-50%, -50%);
-                font-size: 2rem;
+                font-size: 1.5rem;
+                word-break: break-all;
             }
             .texto{
             position: absolute;
