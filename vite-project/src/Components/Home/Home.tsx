@@ -27,6 +27,10 @@ function subtrair(){
     }
 }
 
+function enviar(){
+    localStorage.info = indice
+}
+
     return (
     <body>
             <div>
@@ -35,7 +39,7 @@ function subtrair(){
             </div>
 
             <div className="livros">
-                <Capa className="ima" capa={capas[indice]} />
+                <Link to={"/Produto"} onClick={enviar}><Capa className="ima" capa={capas[indice]} /></Link>
                 <button className="esquerda" onClick={subtrair}> <div className="setaEsquerda"/> </button>
                 <button className="direita" onClick={somar}> <div className="setaDireita"/> </button>
             </div>

@@ -9,6 +9,7 @@ export default function Vendas(){
     const [indice,setIndice] = useState(0);
     const [indice2,setIndice2] = useState(1);
     const [indice3,setIndice3] = useState(2);
+    localStorage.setItem("id", "0")
 
     function somar(){
         if(indice3<5){
@@ -25,6 +26,19 @@ export default function Vendas(){
             setIndice3(indice3-3)
         }
     }
+
+    function enviar(){
+        localStorage.info = indice
+    }
+
+    function enviar2(){
+        localStorage.info = indice2
+    }
+
+    function enviar3(){
+        localStorage.info = indice3
+    }
+
     return (
         <body>
             <div className="conteudo">
@@ -32,19 +46,19 @@ export default function Vendas(){
                         <div className="livro">
                             <Livro livro={livros[indice]}/>
                             <img src="imagens/LivroLoja.png" alt="" />
-                            <Link to={"/Produto"}><button>comprar</button></Link>
+                            <Link to={"/Produto"}><button onClick={enviar}>comprar</button></Link>
                         </div>
                         <div className="separador"/>
                         <div className="livro">                           
                             <Livro livro={livros[indice2]}/>
                             <img src="imagens/LivroLoja.png" alt="" />
-                            <Link to={"/Produto"}><button>comprar</button></Link>
+                            <Link to={"/Produto"}><button onClick={enviar2}>comprar</button></Link>
                         </div>
                         <div className="separador"/>
                         <div className="livro">
                             <Livro livro={livros[indice3]}/>
                             <img src="imagens/LivroLoja.png" alt="" />
-                            <Link to={"/Produto"}><button>comprar</button></Link>
+                            <Link to={"/Produto"}><button onClick={enviar3}>comprar</button></Link>
                         </div>
                     </div>
                     <button className="esquerda" onClick={subtrair}><div className="setaEsquerda"></div></button>
