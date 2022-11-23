@@ -7,10 +7,6 @@ import { useState } from 'react';
 
 export default function Login(){
     
-    function validarConta(){
-        return(<><span>Hello</span></>);
-    }
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -33,7 +29,8 @@ export default function Login(){
         );
       }
       if (loading) {
-        return <p>Loading...</p>;
+        return <><p>Loading...</p>
+        <span>Logado com sucesso!</span><Link className='Retorno' to={'/Cadastro'}></Link></>
       }
 
     return(
