@@ -1,8 +1,26 @@
 import { Link } from "react-router-dom";
 import FrameSI from "../FrameSI/FrameSI";
 import "../Styles/Home.scss"
+import capas from "../../livros.json"
+import { useState } from "react";
+import Capa from "../Livro/capa";
+
 
 export default function Home(){
+const [indice,setIndice] = useState(0);
+
+function somar(){
+    if(indice<(capas.length-1)){
+        setIndice(indice+1)
+    }
+}
+
+function subtrair(){
+    if(indice>0){
+        setIndice(indice-1)
+    }
+}
+
     return (
     <body>
             <div>
@@ -11,9 +29,9 @@ export default function Home(){
             </div>
 
             <div className="livros">
-                <a href=""><img src="https://drive.google.com/uc?id=15IefP0xdmNja-2hRCid5J-C8uNdAzcFl" alt="" /></a>
-                <button className="esquerda"> <div className="setaEsquerda"/> </button>
-                <button className="direita"> <div className="setaDireita"/> </button>
+                <Capa capa={capas[indice]} />
+                <button className="esquerda" onClick={subtrair}> <div className="setaEsquerda"/> </button>
+                <button className="direita" onClick={somar}> <div className="setaDireita"/> </button>
             </div>
 
             <Link to={"/Login"} className="login" ><p>Login</p></Link>
