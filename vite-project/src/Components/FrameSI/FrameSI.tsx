@@ -3,6 +3,8 @@ import '../Styles/FrameSI.scss'
 
 
 export default function FrameSI(){
+
+    localStorage.info=0;
     return(
         <>
             <div className="superior">

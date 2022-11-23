@@ -9,8 +9,8 @@ export default function Compra({compra}:any){
         <div className="tabela">
             <div className="topo">
                 <p>Vendido e entregue por Books Corumbá</p>
-                <p>{compra.preco}</p>
-                <p>{compra.preco_promo}</p>
+                <p className='preco' id='antigo'>R$ {compra.preco}</p>
+                <p className='preco'>R$ {compra.preco_promo}</p>
                 <p>em 5x no crédito</p>
             </div>
 

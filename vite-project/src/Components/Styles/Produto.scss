@@ -5,15 +5,18 @@
 
     .tituloLivro{
         position: absolute;
-        top: 10%;
-        left: 30%;
+        top: 13%;
+        left: 32%;
+        transform: translate(-50%,-50%);
+        font-weight: bolder;
+        font-size: 35px;
     }
 
     .imgLivro{
         position: absolute;
-        left: 15%;
+        left: 17.5%;
         top: 25%;
-        width: 35%;
+        width: 30%;
         height: 60%;
     }
 
@@ -26,6 +29,17 @@
         height: 55%;
         background-color: white;
         border: 50px;
+
+        .preco{
+            font-weight: bolder;
+            left: 10%;
+            font-size: 18px;
+        }
+
+        #antigo{
+            text-decoration: line-through;
+        }
+
         p{
             font-size: 13px;
         }
@@ -41,7 +55,7 @@
         }
 
         .pagamentos{
-            
+
             left: 10%;
             position: absolute;
             top: 60%;
