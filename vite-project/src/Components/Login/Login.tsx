@@ -1,12 +1,40 @@
 import { Link } from 'react-router-dom';
 import "../Styles/Login.scss"
 import Frames from "../FrameLogCad/Frames";
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { auth } from '../../Services/firebase';
+import { useState } from 'react';
 
 export default function Login(){
     
     function validarConta(){
         return(<><span>Hello</span></>);
     }
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useSignInWithEmailAndPassword(auth);
+    
+    function handleSignIn(){
+        signInWithEmailAndPassword(email, password);
+    }
+
+    if (error) {
+        return (
+          <div>
+            <p>Error: {error.message}</p>
+          </div>
+        );
+      }
+      if (loading) {
+        return <p>Loading...</p>;
+      }
 
     return(
         <body>
@@ -16,10 +44,10 @@ export default function Login(){
 
                 <form action="">
                     <label>E-mail: </label>
-                    <input type="email" name="email" /><br/>
+                    <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/><br/>
                     <label>Senha: </label>
-                    <input type="password" /><br />
-                    <button onClick={validarConta}>Entrar</button>
+                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/><br />
+                    <button onClick={handleSignIn}>Entrar</button>
                 </form>
  
                 <div className="baixo">
