@@ -1,0 +1,6 @@
+npm install firebase
+npm install @types/firebase
+yarn add react-firebase-hooks
+
+*instala na máquina
+npm install -g firebase-tools
