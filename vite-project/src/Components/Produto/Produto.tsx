@@ -6,12 +6,12 @@ export default function Produto(){
         <body>
             <div className="conteudo">
                 <p className="tituloLivro">Titulo Livro</p>
-                <img className="imgLivro" src="" alt="" /><p>a</p>
+                <img className="imgLivro" src="https://midias.correiobraziliense.com.br/_midias/jpg/2021/01/12/766x527/1_shrek_2-6479637.jpeg?20220728152928?20220728152928" alt="" /><p>a</p>
                 <div className="tabela">
                     <div className="topo">
                         <p>Vendido e entregue por Books Corumbá</p>
-                        <p>preco</p>
-                        <p>preco_promo</p>
+                        <p>R$preco</p>
+                        <p>R$preco_promo</p>
                         <p>em 5x no crédito</p>
                     </div>
 
