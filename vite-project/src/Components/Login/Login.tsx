@@ -7,8 +7,7 @@ import { useState } from 'react';
 import {Navigate} from 'react-router-dom'
 
 export default function Login(){
-    let logado = false;
-    let counter = 0;
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -24,26 +23,18 @@ export default function Login(){
     }
 
     if (error) {
-      alert("hell o")
-        return (
-          <div>
-            {logado=false}
-          </div>
-        );
+        <div>{error.message}</div>
       }
       if (loading) {
-        counter++;
+        console.log(user)
         return <>
-        <p>Loading...</p>
         {Logado()}
         </>
       }
       function Logado(){
-        logado=true;
-        console.log("hello world")
-        if(logado && counter>1){
+        if(user){
+          console.log(user)
           return <Navigate to={"/"} replace={true}></Navigate>
-
         }
       }
     return(
@@ -52,7 +43,7 @@ export default function Login(){
                 <Link to={"/"}><button className="voltar"><div className="seta"></div></button></Link>
                 <h2>LOGIN</h2>
 
-                <form method='get'>
+                <form>
                     <label>E-mail: </label>
                     <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/><br/>
                     <label>Senha: </label>
