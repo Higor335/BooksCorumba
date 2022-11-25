@@ -1,8 +1,31 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Styles/FrameSI.scss'
+import livros from "../../livros.json"
 
 
 export default function FrameSI(){
+    const [filter, setFilter] = useState('')
+    
+
+    function Buscar(){
+        console.log(livros)
+        livros.map(livro=>{
+            let result = livro.titulo.toLowerCase().includes(localStorage.nome.toLowerCase())
+            console.log(result)
+            if(result){
+                console.log(livro.titulo)
+                console.log(livro.id)
+                localStorage.info=livro.id-1;
+            }
+        })
+    }
+
+    function handleSearchText(event: any) {
+        setFilter(event.target.value)
+        console.log(event.target.value)
+        localStorage.nome=event.target.value;
+      }
 
     localStorage.info=0;
     return(
@@ -20,8 +43,9 @@ export default function FrameSI(){
                     <p>Produto</p></Link>
                 
                 <div className='busca'>
-                    <input type="text" placeholder="Procure seu livro"/>
+                    <input type="text" placeholder="Procure seu livro" onChange={handleSearchText}/>
                     <img src="imagens/IconLupa.png" className='iconLupa' alt="Icone de lupa" />
+                    <Link to={"/Produto"}><button onClick={Buscar}>Buscar</button></Link>
                 </div>
             </div>
 

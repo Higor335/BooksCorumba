@@ -1,12 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import "../Styles/Login.scss"
 import Frames from "../FrameLogCad/Frames";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { auth } from '../../Services/firebase';
 import { useState } from 'react';
+import {Navigate} from 'react-router-dom'
 
 export default function Login(){
-    
+    let logado = false;
+    let counter = 0;
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -22,24 +24,35 @@ export default function Login(){
     }
 
     if (error) {
+      alert("hell o")
         return (
           <div>
-            <p>Error: {error.message}</p>
+            {logado=false}
           </div>
         );
       }
       if (loading) {
-        return <><p>Loading...</p>
-        <span>Logado com sucesso!</span><Link className='Retorno' to={'/Cadastro'}></Link></>
+        counter++;
+        return <>
+        <p>Loading...</p>
+        {Logado()}
+        </>
       }
+      function Logado(){
+        logado=true;
+        console.log("hello world")
+        if(logado && counter>1){
+          return <Navigate to={"/"} replace={true}></Navigate>
 
+        }
+      }
     return(
         <body>
             <div className="Form">
                 <Link to={"/"}><button className="voltar"><div className="seta"></div></button></Link>
                 <h2>LOGIN</h2>
 
-                <form action="">
+                <form method='get'>
                     <label>E-mail: </label>
                     <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/><br/>
                     <label>Senha: </label>
