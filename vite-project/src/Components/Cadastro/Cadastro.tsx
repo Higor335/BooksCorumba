@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 import Frames from "../FrameLogCad/Frames"
 import "../Styles/Cadastro.scss"
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -21,15 +21,19 @@ export default function Cadastro(){
     }
 
     if (error) {
-        return (
-          <div>
-            <p>Error: {error.message}</p>
-          </div>
-        );
-      }
-      if (loading) {
-        return <p>Loading...</p>;
-      }
+      <div>{error.message}</div>
+    }
+  if (loading) {
+    console.log(user)
+    return <>
+    {Logado()}
+    </>
+  }
+  function Logado(){
+    if(user){
+      return <Navigate to={"/"}></Navigate>
+    }
+  }
 
     return(
         <body>

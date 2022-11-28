@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom';
-export default function Capa({capa}:any){
+import { Livro } from '../Home/Home';
+
+
+interface CapaProp{
+    livro: Livro | undefined
+}
+
+export default function Capa(props: CapaProp){
     //livro
     return (
             <div>
-                <Link to={'/Produto'}><img src={capa.linkImg}/></Link>
+                <img className='ima' src={props.livro?.imagem}/>
             </div>
     )
 }

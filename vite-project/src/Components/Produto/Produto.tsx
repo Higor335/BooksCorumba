@@ -1,17 +1,42 @@
 import FrameSI from "../FrameSI/FrameSI";
 import "../Styles/Produto.scss"
-import compras from "../../livros.json"
 import Compra from "../Livro/compra";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { Livro } from "../Home/Home";
 
-export default function Produto(){
-    const [indice,setIndice] = useState(0); 
+interface ProdutoProp{
+    params: any
+}
+
+function Component(props: ProdutoProp){
+    const [livro, setLivro] = useState<Livro>(); 
+    const [load, setLoad] = useState<boolean>(true); 
+
+    useEffect(() => {
+        if(load){
+            console.log(props.params.id)
+            fetch(`http://localhost:3333/livro/list/${props.params.id}`).then(response => response.json()).then(data => {
+                    setLivro(data.produto);
+            });
+            setLoad(false)
+        }
+        
+    }, [load]);
+
+    if(!livro)return(<></>)
 
     return (
-        <body>
+        
+        <div>
             
-            <Compra compra={compras[localStorage.info]}/>
+            <Compra compra={livro}/>
             <FrameSI/>
-        </body>
+        </div>
     );
 }
+
+export function Produto() {
+    let params = useParams();
+    return <Component params={params}/>
+  }

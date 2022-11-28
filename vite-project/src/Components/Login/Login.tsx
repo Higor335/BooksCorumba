@@ -25,24 +25,21 @@ export default function Login(){
     if (error) {
         <div>{error.message}</div>
       }
-      if (loading) {
+    if (loading) {
+      return <Navigate to={"/"}></Navigate>
+    }
+    function Logado(){
+      if(user){
         console.log(user)
-        return <>
-        {Logado()}
-        </>
+        return <Navigate to={"/"}></Navigate>
       }
-      function Logado(){
-        if(user){
-          console.log(user)
-          return <Navigate to={"/"} replace={true}></Navigate>
-        }
-      }
+    }
     return(
         <body>
+            <>{Logado}</>
             <div className="Form">
                 <Link to={"/"}><button className="voltar"><div className="seta"></div></button></Link>
                 <h2>LOGIN</h2>
-
                 <form>
                     <label>E-mail: </label>
                     <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)}/><br/>
