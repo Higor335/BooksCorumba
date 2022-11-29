@@ -1,24 +1,42 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, Navigate, NavigateFunction, useNavigate } from 'react-router-dom';
 import '../Styles/FrameSI.scss'
-import livros from "../../livros.json"
+
+function FrameSI() {
+    let navigate = useNavigate();
+    return <FrameS navigate={navigate} />
+  }
+export default FrameSI;
 
 
-export default function FrameSI(){
+export interface PropPage{
+    navigate:  NavigateFunction
+}
+function FrameS(props: PropPage){
     const [filter, setFilter] = useState('')
-    
+    localStorage.textos=2
+    let texto="/Produto/"
+    let id=1;
 
+    const [livro,setLivro] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3333/livro/list').then(response => response.json()).then(data => {
+          setLivro(data);
+        })
+      }, [])
     function Buscar(){
-        console.log(livros)
-        livros.map(livro=>{
+        livro.map(livro=>{
             let result = livro.titulo.toLowerCase().includes(localStorage.nome.toLowerCase())
-            console.log(result)
             if(result){
-                console.log(livro.titulo)
-                console.log(livro.id)
-                localStorage.info=livro.id-1;
+                id=livro.id
+                texto = texto+id;
+                localStorage.textos=id;
+                props.navigate(`/Produto/${id}`)
+                console.log("livro", id)
             }
         })
+ 
     }
 
     function handleSearchText(event: any) {
@@ -28,6 +46,7 @@ export default function FrameSI(){
       }
 
     localStorage.info=0;
+
     return(
         <>
             <div className="superior">
@@ -45,7 +64,7 @@ export default function FrameSI(){
                 <div className='busca'>
                     <input type="text" placeholder="Procure seu livro" onChange={handleSearchText}/>
                     <img src="../imagens/IconLupa.png" className='iconLupa' alt="Icone de lupa" />
-                    <Link to={"/Produto"}><button onClick={Buscar}>Buscar</button></Link>
+                    <button onClick={Buscar}>Buscar</button>
                 </div>
             </div>
 

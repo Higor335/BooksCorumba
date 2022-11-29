@@ -1,11 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import FrameSI from "../FrameSI/FrameSI";
 import "../Styles/Vendas.scss"
 import livros from "../../livros.json"
 import Livro from "../Livro/livro";
 
+export interface Livro {
+    id: number;
+    titulo: string;
+    autor: string;
+    descricao: string;
+    imagem: string;
+    preco: number;
+    precoPromocional: number;
+  }
+
 export default function Vendas(){
+    const [livro,setLivro] = useState<Livro>();
+    const [conteudo, setConteudo] = useState<Livro[]>([]);
+
     const [indice,setIndice] = useState(0);
     const [indice2,setIndice2] = useState(1);
     const [indice3,setIndice3] = useState(2);
@@ -39,6 +52,12 @@ export default function Vendas(){
         localStorage.info = indice3
     }
 
+
+    useEffect(() => {
+        setLivro(conteudo.find(livro => livro.id == indice))
+    }, [indice])
+
+
     return (
         <body>
             <div className="conteudo">
@@ -46,19 +65,19 @@ export default function Vendas(){
                         <div className="livro">
                             <Livro livro={livros[indice]}/>
                             <img src="imagens/LivroLoja.png" alt="" />
-                            <Link to={"/Produto"}><button onClick={enviar}>comprar</button></Link>
+                            <Link to={"/Produto/"+(indice+1)}><button onClick={enviar}>comprar</button></Link>
                         </div>
                         <div className="separador"/>
                         <div className="livro">                           
                             <Livro livro={livros[indice2]}/>
                             <img src="imagens/LivroLoja.png" alt="" />
-                            <Link to={"/Produto"}><button onClick={enviar2}>comprar</button></Link>
+                            <Link to={"/Produto/"+(indice2+1)}><button onClick={enviar2}>comprar</button></Link>
                         </div>
                         <div className="separador"/>
                         <div className="livro">
                             <Livro livro={livros[indice3]}/>
                             <img src="imagens/LivroLoja.png" alt="" />
-                            <Link to={"/Produto"}><button onClick={enviar3}>comprar</button></Link>
+                            <Link to={"/Produto/"+(indice3+1)}><button onClick={enviar3}>comprar</button></Link>
                         </div>
                     </div>
                     <button className="esquerda" onClick={subtrair}><div className="setaEsquerda"></div></button>
