@@ -11,6 +11,7 @@ interface Usuario {
       email: String,
       senha: String,
 }
+//s
 export interface PropPage{
   navigate:  NavigateFunction
 }
