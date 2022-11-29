@@ -18,7 +18,7 @@ export default function Login(){
     const [password, setPassword] = useState('');
     const [emailV, setEmailV] = useState('');
     const [senhaV, setSenhaV] = useState('');
-    const [user,setUser] = useState<Usuario>([]); 
+    const [user,setUser] = useState<Usuario>(); 
     const [load, setLoad] = useState<boolean>(true); 
 
     // const [
@@ -43,7 +43,7 @@ export default function Login(){
   
     useEffect(() => {
         if(load){
-            fetch(`http://localhost:3333/cliente/list`).then(response => response.json()).then(data => {
+            fetch(`http://localhost:3333/cliente/list/6386509ae23a22f12afbad7f`).then(response => response.json()).then(data => {
                   setUser(data);
             });
             setLoad(false)
@@ -52,12 +52,14 @@ export default function Login(){
     }, [load]);
   }
 
-  function Logado(){
+  function Logado(e){
+    e.preventDefault()
     console.log(emailV)
     console.log(senhaV)
     console.log(user)
 
-    if(user.email == emailV){
+    if(user?.email == emailV){
+      console.log(user)
       return <Navigate to={"/"}></Navigate>
     }
   }
