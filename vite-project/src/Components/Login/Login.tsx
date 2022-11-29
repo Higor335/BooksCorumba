@@ -1,4 +1,4 @@
-import { Link} from 'react-router-dom';
+import { Link, NavigateFunction, useNavigate} from 'react-router-dom';
 import "../Styles/Login.scss"
 import Frames from "../FrameLogCad/Frames";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
@@ -11,8 +11,18 @@ interface Usuario {
       email: String,
       senha: String,
 }
+export interface PropPage{
+  navigate:  NavigateFunction
+}
 
-export default function Login(){
+function Login() {
+  let navigate = useNavigate();
+  return <Lg navigate={navigate} />
+}
+
+export default Login
+
+function Lg(props: PropPage){
     
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -56,12 +66,17 @@ export default function Login(){
     e.preventDefault()
     console.log(emailV)
     console.log(senhaV)
-    console.log(user)
-
-    if(user?.email == emailV){
-      console.log(user)
-      return <Navigate to={"/"}></Navigate>
-    }
+    
+    fetch(`http://localhost:3333/cliente/login/${emailV}/${senhaV}`).then(async response => {
+          if(response.status == 200){
+            const data = await response.json();
+            setUser(data);
+            localStorage.setItem('userid', data._id);
+            props.navigate("/")
+          }else{
+            alert("login ou senha invalidos")
+          }
+      })
   }
 
 
@@ -89,8 +104,4 @@ export default function Login(){
             <Frames></Frames>
         </body>
     )
-}
-
-function preventDefault() {
-  throw new Error('Function not implemented.');
 }
